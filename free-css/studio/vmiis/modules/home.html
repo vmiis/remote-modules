@@ -4,6 +4,12 @@
       <div class="intro-text">
         <div class="intro-lead-in">Welcome To Our Studio!</div>
         <div class="intro-heading">It's Nice To Meet You</div>
-        <a href="#services" class="page-scroll btn btn-primary">Tell Me More</a></div>
+        <a class="page-scroll btn btn-primary">Tell Me More</a></div>
     </div>
   </header>
+  <script>
+   	$('a').on('click',function(){
+          var id=window.location.href.split('id=').pop().split('&')[0];
+   		window.parent.postMessage({sandbox_id:'sandbox'+id,module_name:'main_simple-static-content-module'},"*")
+   	})
+  </script>

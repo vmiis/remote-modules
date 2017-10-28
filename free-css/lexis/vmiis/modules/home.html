@@ -11,7 +11,7 @@
 </section>
 <script>
  	$('a').on('click',function(){
- 		id=window.location.href.split('id=').pop()
- 		window.parent.postMessage({sandbox_id:'sandbox'+id,cmd:'main_simple-static-content-module'},"*")
+        var id=window.location.href.split('id=').pop().split('&')[0];
+ 		window.parent.postMessage({sandbox_id:'sandbox'+id,module_name:'main_simple-static-content-module'},"*")
  	})
 </script>
